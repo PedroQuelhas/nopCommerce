@@ -53,6 +53,11 @@ namespace Nop.Data.Mapping
 
                 var columnSystemType = (memberInfo as PropertyInfo)?.PropertyType ?? typeof(string);
 
+                var dataType = SqlDataType.GetDataType(columnSystemType).Type.DataType;
+                var precision = dataType == LinqToDB.DataType.DateTime2 
+                    ? column.Precision ?? 7 
+                    : column.Precision ?? 0;
+
                 return new ColumnAttribute
                 {
                     Name = column.Name,
@@ -60,9 +65,9 @@ namespace Nop.Data.Mapping
                     IsColumn = true,
                     CanBeNull = column.IsNullable ?? false,
                     Length = column.Size ?? 0,
-                    Precision = column.Precision ?? 0,
+                    Precision = precision,
                     IsIdentity = column.IsIdentity,
-                    DataType = SqlDataType.GetDataType(columnSystemType).Type.DataType
+                    DataType = dataType
                 };
             });
 
