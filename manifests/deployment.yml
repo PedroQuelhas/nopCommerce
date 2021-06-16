@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: nxgnopcommerce 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nxgnopcommerce
+  template:
+    metadata:
+      labels:
+        app: nxgnopcommerce 
+    spec:
+      containers:
+        - name: nxgnopcommerce 
+          image: nxgpoccontainerregistry.azurecr.io/nxgnopcommerce
+          ports:
+          - containerPort: 80
