@@ -1,0 +1,6 @@
+﻿{
+  "DataConnectionString": "Server=tcp:nxg-poc-sqlserver.database.windows.net,1433;Initial Catalog=nxg-npcommerce;Persist Security Info=False;User ID=nxg-poc-admin;Password=o86QfjTyW4L!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+  "DataProvider": "sqlserver",
+  "SQLCommandTimeout": null,
+  "RawDataSettings": {}
+}
