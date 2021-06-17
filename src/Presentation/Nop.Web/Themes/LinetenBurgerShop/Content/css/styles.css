@@ -876,15 +876,17 @@ label, label + * {
 .header {
   position: relative;
   z-index: 10;
-  width: 95%;
+  width: 100%;
   margin: auto;
   text-align: center;
+  background: linear-gradient(0.25turn, #45c8f5, #ceeaf4,#45c8f5);
 }
 
 .header-upper {
   position: relative;
   z-index: 1;
   border-bottom: 1px solid #ddd;
+  background-color: #454545;
 }
 
 .header-selectors-wrapper {
@@ -983,7 +985,7 @@ label, label + * {
 
 .header-logo {
   margin: 0 0 20px;
-  text-align: center;
+  text-align: center !important;
 }
 
 .header-logo a {
@@ -992,13 +994,13 @@ label, label + * {
   line-height: 0; /*firefox line-height bug fix*/
 }
 
-.header-logo a img {
-  max-width: 100%;
-  opacity: 1;
-}
+  .header-logo a img {
+    max-width: 100%;
+    opacity: 1;
+  }
 
 .search-box form {
-  display: inline-block;
+  display: none;
 }
 
 .search-box form:after {
@@ -6670,6 +6672,7 @@ pre {
     width: 90%;
     max-width: 600px;
     margin: 0 auto 40px;
+    background-color: #454545;
   }
 
   .menu-toggle {
@@ -6780,11 +6783,11 @@ pre {
   /*** GLOBAL ***/
 
 
-  .master-wrapper-content,
+  /*.master-wrapper-content,
   .header-menu {
     width: 92.5%;
   }
-
+*/
 
   /*** GLOBAL TABLES ***/
 
@@ -7752,10 +7755,10 @@ pre {
   /*** HEADER ***/
 
 
-  .header {
+/*  .header {
     width: 980px;
     margin: auto;
-  }
+  }*/
 
   .header-upper:after {
     content: "";
@@ -7960,12 +7963,13 @@ pre {
   .header-menu {
     position: relative;
     z-index: 5;
-    width: 980px;
+    /*width: 980px;*/
     margin: 0 auto 30px;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
-    padding: 25px 0;
+    padding: 10px 0;
     text-align: center;
+    background-color: #454545;
   }
 
   .menu-toggle,
@@ -7993,14 +7997,14 @@ pre {
     border-left: none;
   }
 
-  .header-menu > ul > li > a {
-    display: block;
-    padding: 5px 10px;
-    line-height: 20px;
-    font-size: 17px; /*reset zeroing*/
-    color: #555;
-    cursor: pointer;
-  }
+    .header-menu > ul > li > a {
+      display: block;
+      padding: 5px 10px;
+      line-height: 20px;
+      font-size: 17px; /*reset zeroing*/
+      color: #45c8f5;
+      cursor: pointer;
+    }
 
   .header-menu > ul > li > a:hover,
   .header-menu > ul > li > a:focus {
@@ -8617,17 +8621,17 @@ pre {
   /*** HEADER ***/
 
 
-  .header {
+ /* .header {
     width: 1200px;
-  }
+  }*/
 
 
   /*** NAVIGATION ***/
 
 
-  .header-menu {
+  /*.header-menu {
     width: 1200px;
-  }
+  }*/
 
   .header-menu > ul > li {
     padding: 0 20px;
@@ -8635,7 +8639,7 @@ pre {
 
   .header-menu > ul > li > a,
   .header-menu > ul > li > span {
-    font-size: 18px;
+    font-size: 25px;
   }
 
 
